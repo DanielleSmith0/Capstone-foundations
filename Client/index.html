@@ -8,7 +8,55 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>Practice With Your Little Ones</h1>
+        <nav>
+            <a class="nav-link">Basic Practice Words</a>
+            <a class="nav-link">Custom Word Lists</a>
+            <a class="nav-link">New List</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+          <h2>Let's Practice!</h2>
+        </section>
+        <button id="get-word-list-button">Get a Word</button>
+        <section>
+        </section>
+        <button id="get-random-word-button">Get a Word</button>
+        <section>
+          <h3>Add your own words to practice:</h3>
+          <form id="post-word-form">
+              New word:
+              <input id="post-new-word"/>
+              <button>Add word to list</button>
+          </form>
+        </section>
+        <section>
+            <button id = "correct-button">Correct!</button>
+        </section>
+        <section>
+            <button id = "practice-button">Practice Again</button>
+        </section>
+        <section>
+          <h3>Check off your completed goals!</h3>
+          <form id = "delete-goal-form">
+            Your goal:
+            <input id="delete-name"/>
+            <button>Check</button>
+          </form>
+        </section>
     
+    </main>
+    <footer>
+        <h2>Sign up to receive discount alerts!</h2>
+        <p id="enter-email">Enter Your Email</p>
+        <div class="email">
+          <input type="text" />
+          <button id="subscribe">Sign up</button>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
