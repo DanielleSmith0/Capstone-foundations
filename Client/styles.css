@@ -3,6 +3,7 @@ body {
     margin: 0;
     font-family: "Explora", cursive;
     font-size: 20px;
+    background-color: blanchedalmond;
   }
   
   header {
@@ -39,13 +40,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  #Massage-container {
-    width: 670px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
   }
   
   .option {
@@ -85,15 +79,26 @@ body {
   #thank-you {
     padding: 10px;
   }
-  
+
+  button {
+    background-color: #ffc54d;
+    border-radius: 20%;
+
+  }
+
   button:hover {
+    color: white;
     background-color: #bd4291;
     transform: scale(1.2, 1.2);
     cursor: pointer;
+    border-radius: 20%;
   }
   
   button:active {
     transform: scale(1, 1);
-    border-color: #ffc54d;
+    border-color: #bd4291;
   }
   
+  .hide {
+    display: none;
+}
