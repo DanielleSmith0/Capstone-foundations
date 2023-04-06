@@ -1,18 +1,9 @@
-let express = require("express");
-let cors = require("cors");
-let Sequelize = require("sequelize");
 require('dotenv').config();
 
-const {DB_URL} = process.env;
+const {PORT} = process.env;
 
-const sequelize = newSequelize (CONNECTION_STRING, {
-    dialect: 'postgres',
-    dialectOptions: {
-        ssl: {
-            rejectUnauthorized: false
-        }
-    }
-});
+let express = require("express");
+let cors = require("cors");
 
 const app = express();
 
@@ -21,17 +12,23 @@ app.use(cors());
 app.use(express.json());
 
 const {
+    seed,
     createWord,
     getRandomWord,
-    removePracticeWord
+    removePracticeWord,
+    // getWordList
 } = require("./ctrl")
 
 app.post("/word", createWord);
 
-app.get("/api/word", getRandomWord);
+app.get("/word", getRandomWord);
 
-app.delete('/word/:wordRemoved', removePracticeWord);
+app.delete('/word/:wordId', removePracticeWord);
 
-app.listen(7417, () => {
-    console.log("app is up on 7417");
+// app.get("/wordList", getWordList);
+
+app.post('/seed', seed);
+
+app.listen(PORT, () => {
+    console.log("app is up on " + PORT);
 });

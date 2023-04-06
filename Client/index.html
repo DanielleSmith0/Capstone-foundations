@@ -10,45 +10,43 @@
 <body>
     <header>
         <h1>Word Practice With Little Ones</h1>
-        <nav>
-            <a class="nav-link">Basic Practice Words</a>
-            <a class="nav-link">Custom Word Lists</a>
-        </nav>
+        <!-- <nav>
+            <button id="showPage1Btn">Practice</button>
+            <button id="showPage2Btn">List of Words</button>
+        </nav> -->
     </header>
     <main>
-        <section id =left></section>
-            <section>
-                <h2>Let's Practice!</h2>
+        <!-- <section id="page1" class = hide></section> -->
+            <section id =left>
+                <section>
+                    <section>
+                        <section>
+                            <h2>Let's Practice!</h2>
+                        </section>
+                        <section>
+                            <button id="get-random-word-button">Get a Word</button>
+                        </section> 
+                    </section>
+                    <h4>Add your own words to practice:</h4>
+                    <form id="post-word-form">
+                        New word:
+                        <input id="post-new-word-input"/>
+                        <button>Add word to list</button>
+                    </form>
+                </section>
             </section>
-            <section>
-                <button id="get-random-word-button">Get a Word</button>
-            </section> 
-            <section>
-            <h3>Add your own words to practice:</h3>
-            <form id="post-word-form">
-                New word:
-                <input id="post-new-word-input"/>
-                <button>Add word to list</button>
-            </form>
-            </section>
-        </section>
-        <aside>
-            <div id="word-display"></div>
-            <section id="buttons">
-                <!-- <button id = "correct-button" class = "hide">Correct!</button>
-            </section>
-            <section>
-                <button id = "practice-button" class = "hide">Practice Again</button> -->
-            </section>
-        </aside>
+            <aside>
+                <div id="word-display"></div>
+            </aside>
+        <!-- </section> -->
+        <!-- <section class="hide" id="page2"> -->
+            <!-- <h1>Your Practice Words!</h1>
+            <h2>Add your own custom words as well!</h2>
+            <div id=""word-list-display></div>
+        <section> -->
     </main>
     <footer>
-        <h2>Sign up to receive discount alerts!</h2>
-        <p id="enter-email">Enter Your Email</p>
-        <div class="email">
-          <input type="text" />
-          <button id="subscribe">Sign up</button>
-        </div>
+        <h2>Practice Daily For Better Results!</h2>
     </footer>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>

@@ -1,20 +1,9 @@
-CREATE TABLE baseWords (
+CREATE TABLE wordList (
     id SERIAL PRIMARY KEY,
     word VARCHAR(50) NOT NULL,
 );
 
-CREATE TABLE customWords (
-    id SERIAL PRIMARY KEY,
-    word VARCHAR(50) NOT NULL,
-);
-
-CREATE TABLE allWords {
-    id SERIAL PRIMARY KEY,
-    base_id INTEGER NOT NULL REFERENCES baseWords(id),
-    custom_id INTEGER NOT NULL REFERENCES customWords(id)
-}
-
-INSERT INTO baseWords (word)
+INSERT INTO wordList (word)
             values ('run'),
             ('rice'),
             ('rat'),
@@ -51,9 +40,4 @@ INSERT INTO baseWords (word)
             ('spoon'),
             ('stop'),
             ('swim');
-        `).then(() => {
-            console.log('DB seeded!')
-            res.sendStatus(200)
-        }).catch(err => console.log('error seeding DB', err))
-    }
-}
+    
